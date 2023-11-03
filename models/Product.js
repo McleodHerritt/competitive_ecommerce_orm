@@ -22,10 +22,10 @@ Product.init(
     product_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: Product,
-        key: "id",
-      },
+      // references: {
+      //   model: Product,
+      //   key: "id",
+      // },
     },
 
     price: {
@@ -34,10 +34,10 @@ Product.init(
       validate: {
         isDecimal: true,
       },
-      references: {
-        model: Tag,
-        key: "id",
-      },
+      // references: {
+      //   model: Tag,
+      //   key: "id",
+      // },
     },
 
     stock: {
@@ -50,7 +50,7 @@ Product.init(
     },
 
     category_id: {
-      type: DataTypes.DECIMAL(10, 2),
+      type: DataTypes.INTEGER,
       references: {
         model: Category,
         key: "id",
