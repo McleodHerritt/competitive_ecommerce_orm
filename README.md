@@ -48,3 +48,7 @@ After setting up the project and database, you can use the provided API routes t
 ## License
 
 This project is free software under the terms of the Unlicense. See the [LICENSE](LICENSE) file for more information.
+
+## Link to Video
+
+This is a video showing Insomnia exercising the API - [VIDEO](https://drive.google.com/file/d/1z_uVwwPfuAdPl2-RTj6fTJrNZZwY-ERG/view)
