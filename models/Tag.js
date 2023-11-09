@@ -1,12 +1,16 @@
+// Import the necessary features from the sequelize package
 const { Model, DataTypes } = require("sequelize");
 
+// Import the established sequelize connection from the connection.js file
 const sequelize = require("../config/connection.js");
 
+// Extend the Sequelize Model class to create a new Tag model
 class Tag extends Model {}
 
+// Initialize the Tag model with its schema definition
 Tag.init(
   {
-    // define columns
+    // define the columns in the table
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -18,6 +22,7 @@ Tag.init(
     },
   },
   {
+    // Model configuration
     sequelize,
     timestamps: false,
     freezeTableName: true,
@@ -26,4 +31,5 @@ Tag.init(
   }
 );
 
+// Export the Tag model for use in other parts of the application
 module.exports = Tag;

@@ -48,22 +48,22 @@ Product.init(
         isNumeric: true,
       },
     },
-
+    // Define a 'category_id' attribute for the 'Product' model
     category_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER, // Set the data type to INTEGER
       references: {
-        model: Category,
-        key: "id",
+        model: Category, // This sets up a foreign key that references the 'Category' model
+        key: "id", // Specifies that the 'id' column in the 'Category' table is the key that 'category_id' references
       },
     },
   },
   {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "product",
+    sequelize, // Pass the sequelize instance
+    timestamps: false, // Indicates that Sequelize should not automatically manage createdAt and updatedAt timestamps for this model
+    freezeTableName: true, // Instructs Sequelize not to change the table name to be plural
+    underscored: true, // Tells Sequelize to use underscores instead of camelCasing for column names (e.g., 'created_at' instead of 'createdAt')
+    modelName: "product", // Defines the name of the model
   }
 );
 
-module.exports = Product;
+module.exports = Product; // Export the Product model for use in other files
